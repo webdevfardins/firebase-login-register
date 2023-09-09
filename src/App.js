@@ -61,6 +61,19 @@ class App extends Component {
         this.setState({ message: error.message, type: 0 });
       });
   };
+  googleLogin = (event) => {
+    event.preventDefault();
+    var provider = new firebase.auth.GoogleAuthProvider();
+    firebase
+      .auth()
+      .signInWithPopup(provider)
+      .then((response) => {
+        console.log(response.user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   LoginHandler = (event) => {
     event.preventDefault();
     const auth = firebase.auth();
@@ -87,6 +100,7 @@ class App extends Component {
       <div>
         {this.state.page ? (
           <Register
+            google={this.googleLogin}
             type={this.state.type}
             message={this.state.message}
             switch={this.pageSwitchHandler}

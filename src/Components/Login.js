@@ -15,10 +15,10 @@ function Login(props) {
           <h4 className="Card-title mt-3 text-center">Login</h4>
           <p className={msgClass.join(" ")}>{props.message}</p>
           <p>
-            <a href="" className="btn btn-block btn-social btn-twitter ">
+            <a href="" className="btn btn-block btn-social btn-info ">
               <i className=" fab fa-twitter me-2">Login via twitter</i>
             </a>
-            <a href="" className="btn btn-block btn-facebook">
+            <a href="" className="btn btn-block btn-primary">
               <i className="fab fa-facebook">Login via facebook</i>
             </a>
           </p>

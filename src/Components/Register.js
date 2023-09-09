@@ -16,10 +16,10 @@ export default function Registration(props) {
             <p className="text-center">Get started with your free account</p>
             <p className={msgClass.join(" ")}>{props.message}</p>
             <p>
-              <a href="" className="btn btn-block btn-twitter">
+              <a href=""onClick={props.google} className="btn btn-block btn-info">
                 <i className="fab fa-twitter">Sigup via google</i>
               </a>
-              <a href="" className="btn btn-block btn-facebook">
+              <a href="" className="btn btn-block btn-primary">
                 <i className="fab fa-facebook">sginup via facebook</i>
               </a>
             </p>
